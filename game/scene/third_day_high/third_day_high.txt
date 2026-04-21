@@ -1,0 +1,6 @@
+
+intro:第三天 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeBg:images.jpg -next;
+changeFigure:552621726_24725461733779145_6900315440097708313_n-removebg-preview.png -next;
+Ivan:今天早上看到你，心情真的很好！;
+choose:邀请她去吃午餐:选择场景文件|送她小礼物:选择场景文件;

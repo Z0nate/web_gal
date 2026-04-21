@@ -1,0 +1,5 @@
+
+changeBg:images.jpg -next;
+changeFigure:552621726_24725461733779145_6900315440097708313_n-removebg-preview.png -next;
+Ivan:哇，你主动跟我聊啊，我好开心！;
+changeScene:third_day_high/third_day_high.txt;

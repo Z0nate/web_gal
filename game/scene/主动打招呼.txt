@@ -1,0 +1,6 @@
+
+changeBg:Classroom.jpg -next;
+{Name}:早上好！;
+changeFigure:Smirk.png -next;
+Ivan:哇，你主动跟我打招呼，我好开心！;
+changeScene:second_day_high.txt;

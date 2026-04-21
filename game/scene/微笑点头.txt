@@ -1,0 +1,5 @@
+
+changeBg:Classroom.jpg.jpg -next;
+changeFigure:Happy.png;
+Ivan:嘻嘻，你点头的样子也挺可爱的。;
+changeScene:second_day_mid.txt;

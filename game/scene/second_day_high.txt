@@ -1,0 +1,6 @@
+
+intro:第二天 -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+changeBg:Classroom.jpg -next;
+changeFigure:Happy.png -next;
+Ivan:最近你对我特别好呢！;
+choose:主动找她聊天:second_day_high/主动找她聊天.txt|偷看她笑:second_day_high/偷看她笑.txt;
