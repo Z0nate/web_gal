@@ -9,10 +9,10 @@ changeBg:House.webp -next;
 
 changeBg:Classroom.jpg;
 setAnimation:enter-from-bottom -target=fig-center -next;
-changeFigure:Ivan_Normal.png;
+changeFigure:Ivan_Normal.png -position=center;
 
 Ivan:你终于来了。 -notend;
-changeFigure:Ivan_Smirk.png -next;
+changeFigure:Ivan_Smirk.png -position=center -next;
 还以为你第一天就逃学。;
 
 choose:打招呼:打招呼|无视:无视;
@@ -21,23 +21,23 @@ label:打招呼;
 {Name}:早。;
 setAnimation:shake -target=fig-center;
 Ivan:……你这样，我会误会的。;
-setVar:Ivan_Love=Ivan_Love+15;
+setVar:Ivan_Love=Ivan_Love+20;
 jumpLabel:新同学;
 
 label:无视;
 {Name}:…;
 Ivan:冷淡型？挺对胃口。;
-setVar:Ivan_Love=Ivan_Love+5;
+setVar:Ivan_Love=Ivan_Love+10;
 jumpLabel:新同学;
 
 label:新同学;
-changeFigure:none -next;
-changeFigure:Teacher.webp;
+changeFigure:none -position=center -next;
+changeFigure:Teacher.webp -position=center;
 
 老师:介绍一下新同学。;
 
 setAnimation:enter-from-right -target=fig-right -next;
-changeFigure:WanHim_Normal.png;
+changeFigure:WanHim_Normal.png -position=right;
 
 运谦:运谦。;
 
@@ -46,10 +46,10 @@ changeFigure:WanHim_Normal.png;
 choose:对视:对视|移开视线:移开视线;
 
 label:对视;
-changeFigure:WanHim_Smile.png;
+changeFigure:WanHim_Smile.png -position=right;
 运谦:你在看我。;
 {Name}:不是——;
-setVar:WanHim_Love=WanHim_Love+15;
+setVar:WanHim_Love=WanHim_Love+20;
 jumpLabel:午休;
 
 label:移开视线;
@@ -65,14 +65,14 @@ changeBg:Classroom.jpg;
 choose:跟Ivan吃:跟Ivan吃|找运谦:找运谦|自己一个人:自己一个人;
 
 label:跟Ivan吃;
-changeFigure:Ivan_Happy.png;
+changeFigure:Ivan_Happy.png -position=center;
 Ivan:你选我？;
 
 choose:调侃他:调侃他|认真聊天:认真聊天;
 
 label:调侃他;
 {Name}:你不是一直很自信吗？;
-changeFigure:Ivan_Smirk.png;
+changeFigure:Ivan_Smirk.png -position=center;
 Ivan:那是对别人。;
 Ivan:对你不一样。;
 setVar:Ivan_Love=Ivan_Love+15;
@@ -82,20 +82,20 @@ label:认真聊天;
 {Name}:你平时都这样吗？;
 Ivan:哪样？;
 {Name}:…有点强势。;
-changeFigure:Ivan_Serious.png;
+changeFigure:Ivan_Serious.png -position=center;
 Ivan:那你要习惯。;
 setVar:Ivan_Love=Ivan_Love+20;
 jumpLabel:午休后;
 
 label:找运谦;
-changeFigure:WanHim_Normal.png;
+changeFigure:WanHim_Normal.png -position=center;
 运谦:一起？;
 
 choose:坐近一点:坐近一点|保持距离:保持距离;
 
 label:坐近一点;
 {Name}:可以。;
-changeFigure:WanHim_Smile.png;
+changeFigure:WanHim_Smile.png -position=center;
 运谦:你不怕我？;
 {Name}:为什么要怕？;
 运谦:……以后你会知道。;
@@ -112,6 +112,7 @@ setVar:Hidden=Hidden+5;
 jumpLabel:午休后;
 
 label:自己一个人;
+changeFigure:none -position=center;
 {Name}:一个人清净。;
 
 旁白:但你能感觉到有人在看你。;
@@ -126,14 +127,15 @@ jumpLabel:午休后;
 
 label:午休后;
 changeBg:Classroom.jpg;
+changeFigure:none -position=center;
 
 旁白:你刚回到座位。;
 
-setAnimation:enter-from-left -target=fig-left;
-changeFigure:Ivan_Normal.png;
+setAnimation:enter-from-left -target=fig-left -next;
+changeFigure:Ivan_Normal.png -position=left;
 
-setAnimation:enter-from-right -target=fig-right;
-changeFigure:WanHim_Normal.png;
+setAnimation:enter-from-right -target=fig-right -next;
+changeFigure:WanHim_Normal.png -position=right;
 
 Ivan:聊得挺开心？;
 
@@ -156,10 +158,10 @@ jumpLabel:放学;
 label:沉默;
 {Name}:……;
 
-changeFigure:Ivan_Serious.png;
+changeFigure:Ivan_Serious.png -position=left;
 Ivan:不说？;
 
-changeFigure:WanHim_Smile.png;
+changeFigure:WanHim_Smile.png -position=right;
 运谦:那我当默认了。;
 
 setVar:Ivan_Love=Ivan_Love+5;
@@ -185,10 +187,10 @@ label:放学;
 changeBg:Hallway.jpg;
 
 setAnimation:enter-from-left -target=fig-left -next;
-changeFigure:Ivan_Serious.png;
+changeFigure:Ivan_Serious.png -position=left;
 
 setAnimation:enter-from-right -target=fig-right -next;
-changeFigure:WanHim_Normal.png;
+changeFigure:WanHim_Normal.png -position=right;
 
 Ivan:跟我走。;
 
@@ -197,19 +199,14 @@ Ivan:跟我走。;
 setAnimation:shake -target=fig-center;
 旁白:气氛瞬间变冷。;
 
-choose:选Ivan:选Ivan|选运谦:选运谦|逃避:逃避;
-
 label:结局判断;
-changeFigure:none;
+changeFigure:none -position=left;
+changeFigure:none -position=right;
 
-jumpLabel:Ivan结局 -when=Ivan_Love>=50 && WanHim_Love<40;
-
-jumpLabel:运谦结局 -when=WanHim_Love>=50 && Ivan_Love<40;
-
-jumpLabel:双人结局 -when=Ivan_Love>=50 && WanHim_Love>=50;
-
+jumpLabel:Ivan结局 -when=Ivan_Love>= 40&& WanHim_Love<40;
+jumpLabel:运谦结局 -when=WanHim_Love>=40 && Ivan_Love<40;
+jumpLabel:双人结局 -when=Ivan_Love>=40 && WanHim_Love>=40;
 jumpLabel:隐藏结局 -when=Hidden>=30;
-
 jumpLabel:普通结局;
 
 label:Ivan结局;
