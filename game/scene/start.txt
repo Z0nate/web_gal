@@ -214,7 +214,7 @@ jumpLabel:普通结局;
 
 label:Ivan结局;
 changeBg:CG_Ivan.jpg;
-unlockCg:CG_Ivan;
+unlockCg:CG_Ivan -name=Ivan;
 
 Ivan:你逃不掉。;
 
@@ -227,7 +227,7 @@ end;
 
 label:运谦结局;
 changeBg:CG_WanHim.jpg;
-unlockCg:CG_WanHim;
+unlockCg:CG_WanHim -name=运谦;
 
 运谦:我不会放你走。;
 
@@ -239,7 +239,7 @@ end;
 
 label:双人结局;
 changeBg:CG_Both.jpg;
-unlockCg:CG_Both;
+unlockCg:CG_Both -name=Both;
 
 Ivan:选一个。;
 
@@ -254,7 +254,7 @@ end;
 
 label:隐藏结局;
 changeBg:CG_Alone.jpg;
-unlockCg:CG_Alone;
+unlockCg:CG_Alone -name=Alone;
 
 旁白:你谁都没选。;
 
